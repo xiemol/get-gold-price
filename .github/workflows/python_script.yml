@@ -1,0 +1,24 @@
+name: Daily Python Script
+
+on:
+  schedule:
+    - cron: '0 15 * * *' # 每天午夜执行
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # 指定你的Python版本
+
+      - name: Install Dependencies
+        run: |
+          pip install requests # 将依赖包列表写在requirements.txt文件中
+
+      - name: Execute Python Script
+        run: python goldprice.py # 替换成你的Python脚本名称
