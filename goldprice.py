@@ -117,7 +117,7 @@ body = text+'\n'+'\n'+Rate
 msg = EmailMessage()
 msg['subject'] = subject  # 邮件标题
 msg['From'] = EMAIL_ADDRESS  # 邮件发件人
-msg['To'] = "ybb_x1125@163.com"  # 邮件的收件人ggg111090@163.com
+msg['To'] = "15955922051@163.com"  # 邮件的收件人ggg111090@163.com
 msg.set_content(body)  # 使用set_content()方法设置邮件的主体内容
 
 with smtplib.SMTP_SSL("smtp.163.com", 465, context=context) as smtp:  # 完成加密通讯
