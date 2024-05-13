@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   schedule:
-    - cron: '51 7 * * *' # 每天午夜执行
+    - cron: '52 7 * * *' # 每天午夜执行
 
 jobs:
   run_script:
